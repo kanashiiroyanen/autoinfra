@@ -1,5 +1,5 @@
 # autoinfra
-====
+====  
 社内環境を模したインフラを簡易に構築できるツール。
 VMware ESXi 上の VM で OA 端末を、Docker コンテナ上で社内サーバを構築することを想定している。
 まだ、開発途中
@@ -7,8 +7,8 @@ VMware ESXi 上の VM で OA 端末を、Docker コンテナ上で社内サー�
 ## Desciription
 Web インタフェースから操作が可能
 1. VMware ESXi と vCenter 上で動作する VM (Windows) の作成
-2. VM に任意アプリのインストール
-3. Linux サーバの作成 (Docker を利用)
+2. VM に任意アプリのインストール (Ansible, chocolatey を利用)
+3. Linux サーバの作成 (Ansible, Docker を利用)
 
 ## Requirement
 1. 管理ツールの利用
@@ -26,7 +26,7 @@ Web インタフェースから操作が可能
 
 ## Usage
 VMware ESXi, vCenter, 管理ツールは導入済みである前提で記す。
-また、vCenter において、WinRM と PowerShell 4.0 以上をインストールしておくことが望ましい。
+また、vCenter でテンプレートを作成する VM には、WinRM と PowerShell 4.0 以上をインストールしておくことが望ましい。
 1. Windows Clone の作成
  - autoinfra.php を開く
  - Windows のクローンのタブを選択
