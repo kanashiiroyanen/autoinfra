@@ -24,7 +24,26 @@ function ChangeTab(tabname) {
       <a href="#tab3" class="tab3" onclick="ChangeTab('tab3'); return false;">サーバの設定</a>
    </p>
    <div id="tab1" class="tab">
-      <p>Windows のクローンできるようにする。</p>
+      <form action="./oapc.php" method="post">
+      <dl>
+      <dt>vCenter の IP アドレス</dt>
+      <dd><input name="ipaddr" id="ipaddr" type="text" size="50" /></dd>
+      <dt>vCenter のログインユーザ名</dt>
+      <dd><input name="user" id="user" type="text" size="50" /></dd>
+      <dt>vCenter のログインパスワード</dt>
+      <dd><input name="pass" id="pass" type="password" size="50" /></dd>
+      <dt>テンプレート名</dt>
+      <dd><input name="temp" id="temp" type="text" size="50" /></dd>
+      <dt>新規 VM の名前</dt>
+      <dd><input name="vm" id="vm" type="text" size="50" /></dd>
+      <dt>VM の個数</dt>
+      <dd><input name="vmnum" id="vmnum" type="text" size="50" /></dd>
+      <dt>データストアの名前</dt>
+      <dd><input name="dstore" id="dstore" type="text" size="50" /></dd>
+      <dt>ポートグループの名前</dt>
+      <dd><input name="portgr" id="portgr" type="text" size="50" /></dd><br>
+      <input type="submit" value="送信する" />
+      </form>
    </div>
    <div id="tab2" class="tab">
       <form action="./oapc.php" method="post">
@@ -65,21 +84,5 @@ function ChangeTab(tabname) {
    ChangeTab('tab1');
 </script>
 
-<dt>性別</dt>
-<dd>
-<input name="gender" id="man" type="radio" value="男性" /><label for="man">男性</label><input name="gender" id="woman" type="radio" value="女性" /><label for="woman">女性</label>
-</dd>
-<dt>血液型</dt>
-<dd>
-<select name="blood" id="blood">
-<option value="A型">A型</option>
-<option value="B型">B型</option>
-<option value="O型">O型</option>
-<option value="AB型">AB型</option>
-</select>
-</dd>
-<dt>内容</dt>
-<dd><textarea name="naiyou" id="naiyou" cols="50" rows="10"></textarea></dd>
-</dl>
 </body>
 </html>
