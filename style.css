@@ -19,7 +19,7 @@ p.tabs a {
 /* ▼(C)タブ中身のボックス */
 div.tab {
    /* ▼(C-2)ボックス共通の装飾 */
-   height: 500px; overflow: auto; clear: left;
+   height: 1000px; overflow: auto; clear: left;
 }
 /* ▼(C-3)各ボックスの配色 */
 //div#tab1 { border: 2px solid blue; background-color: #ccffff; }

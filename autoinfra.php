@@ -24,7 +24,7 @@ function ChangeTab(tabname) {
       <a href="#tab3" class="tab3" onclick="ChangeTab('tab3'); return false;">サーバの設定</a>
    </p>
    <div id="tab1" class="tab">
-      <form action="./oapc.php" method="post">
+      <form action="./clone.php" method="post">
       <dl>
       <dt>vCenter の IP アドレス</dt>
       <dd><input name="ipaddr" id="ipaddr" type="text" size="50" /></dd>
@@ -41,7 +41,20 @@ function ChangeTab(tabname) {
       <dt>データストアの名前</dt>
       <dd><input name="dstore" id="dstore" type="text" size="50" /></dd>
       <dt>ポートグループの名前</dt>
-      <dd><input name="portgr" id="portgr" type="text" size="50" /></dd><br>
+      <dd><input name="portgr" id="portgr" type="text" size="50" /></dd>
+      <dt>DHCPの設定 (VM)</dt>
+      <dd>
+	  <select name="dhcp">
+	  <option value="no">NO</option>
+	  <option value="on">ON</option>
+	  </select>
+	  </dd>
+      <dt>IP アドレス (VM)</dt>
+      <dd><input name="vm_ip" id="vm_ip" type="text" size="50" /></dd>
+      <dt>サブネット (VM)</dt>
+      <dd><input name="subnet" id="subnet" type="text" size="50" /></dd>
+      <dt>ゲートウェイ (VM)</dt>
+      <dd><input name="gw" id="gw" type="text" size="50" /></dd><br>
       <input type="submit" value="送信する" />
       </form>
    </div>

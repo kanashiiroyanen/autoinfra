@@ -21,7 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $vmnum = $_POST["vmnum"];
     $dstore= $_POST["dstore"];
     $portgr= $_POST["portgr"];
+    $dhcp = $_POST["dhcp"];
+    $vm_ip = $_POST["vm_ip"];
+    $subnet = $_POST["subnet"];
+    $gw = $_POST["gw"];
 
+/*
     command_exec('pip install pyvmomi');
     command_exec('git clone https://github.com/vmware/pyvmomi-community-samples ~/.');
     command_exec('cd ~/pyvmomi-community-samples/sampl');
@@ -33,6 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	// add nic
 	$exec = './add_nic_to_vm.py -s ' . $ipaddr . ' --user ' $user . ' --password '. $VC_PASS . ' --vm-name ' . $vm . ' --port-group \'' . $portgr . '\'';
     command_exec($exec);
+	*/
 	            
 } else {
     echo "フォームからアクセスしてください";
@@ -55,5 +61,9 @@ vmname: <?=$vm ?><br />
 vmnum: <?=$vmnum ?><br />
 dstore: <?=$dstore ?><br />
 portgr: <?=$portgr?><br />
+dhcp: <?=$dhcp?><br />
+vm_ip: <?=$vm_ip?><br />
+subnet: <?=$subnet?><br />
+gw: <?=$gw?><br />
 </body>
 </html>
