@@ -7,8 +7,8 @@ VMware ESXi 上の VM で OA 端末を、Docker コンテナ上で社内サー�
 ## Desciription
 Web インタフェースから操作が可能
 1. VMware ESXi と vCenter 上で動作する VM (Windows) の作成
-2. VM に任意アプリのインストール
-3. Linux サーバの作成 (Docker を利用)
+2. VM に任意アプリのインストール (Ansible, chocolatey を利用)
+3. Linux サーバの作成 (Ansible, Docker を利用)
 
 ## Requirement
 1. 管理ツールの利用
