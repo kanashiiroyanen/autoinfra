@@ -26,7 +26,7 @@ Web インタフェースから操作が可能
 
 ## Usage
 VMware ESXi, vCenter, 管理ツールは導入済みである前提で記す。
-また、vCenter において、WinRM と PowerShell 4.0 以上をインストールしておくことが望ましい。
+また、vCenter でテンプレートを作成する VM には、WinRM と PowerShell 4.0 以上をインストールしておくことが望ましい。
 1. Windows Clone の作成
  - autoinfra.php を開く
  - Windows のクローンのタブを選択
